@@ -3,12 +3,14 @@
 
     <main class="wrapper">
       <div class="content">
-        <h1>Oh hi there! My name is Will and these days I'm a <a href="http://bradfrost.com/blog/post/frontend-design/" target="_black">front-end designer</a> (though I've worked as a UX/UI designer, creative full-stack developer as well over the past 5 years). I know, I know, there isn't much here. Most of my work is NDA protected (<span class="sad-face"><img src="https://twemoji.maxcdn.com/svg/1f611.svg"></span>), so I can't show it. But if you're interested(!) please reach out and I can probably send you some cool stuff.</h1>
+        <h1>Oh hi there <span class="emoji"><img src="https://twemoji.maxcdn.com/svg/1f44b.svg"></span>! My name is Will and these days I'm a <a href="http://bradfrost.com/blog/post/frontend-design/" target="_black">front-end designer</a> (but over the years I've worked as a UX/UI designer and full-stack developer, respectively). I know, I know, there isn't much here. Most of my work is NDA protected (<span class="emoji"><img src="https://twemoji.maxcdn.com/svg/1f611.svg"></span>). But if you're interested (!) please reach out and I can probably send you some cool stuff <span class="emoji"><img src="https://twemoji.maxcdn.com/svg/1f44d.svg"></span>.</h1>
 
         <div class="contact-links">
-            <a href="" target="_blank">Email me</a>
-            <a href="" target="_blank">LinkedIn</a>
+          <a href="mailto:will@thewilljustice.com" target="_top" @click="copied()">will@thewilljustice.com</a>
+          <a href="https://www.linkedin.com/in/will-justice-aa524857" target="_blank">LinkedIn</a>
+          <a href="https://github.com/wjustice" target="_blank">Github</a>
         </div>
+
       </div>
     </main>
 
@@ -21,26 +23,37 @@ export default {
     return {
       
     }
+  },
+  methods: {
+    copied: function () {
+      console.log('copied');
+    }
   }
 }
 </script>
 
 <style lang="sass">
   // @import './scss/index.scss';
+  // Thumbs-up: 1f44d
+  // Wave: 1f44b
+  $red: #D03802;
+  $blue: #008CCE;
+  $background: #171D22;
   body{
     background: #171D22;
     color: #008CCE;
-    font-family: 'Roboto Slab';
+    font-family: 'Hack';
+    overflow: hidden;
   }
   h1{
     font-size: 1.6em;
     font-weight: 100;
   }
   a {
-    color: #D01F02;
+    color: $red;
     font-weight: 100;
   }
-  img{
+  span img{
     width: 1em;
     position: relative;
     top: .16em;
@@ -61,6 +74,15 @@ export default {
     justify-content: center;
   }
   .contact-links{
-
+    width: 100%;
+    display: flex;
+    justify-content: left;
+    // padding: 10px;
+    // border-top: 2px solid $red;
+    // border-bottom: 2px solid $red;
+  }
+  .contact-links a{
+    font-size: 1.6em;
+    margin-right: 1em;
   }
 </style>
