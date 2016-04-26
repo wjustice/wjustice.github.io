@@ -50,8 +50,10 @@ export default {
     font-weight: 100;
   }
   a {
-    color: $red;
+    color: #888888;
     font-weight: 100;
+    position: relative;
+    text-decoration: none;
   }
   span img{
     width: 1em;
@@ -85,4 +87,48 @@ export default {
     font-size: 1.6em;
     margin-right: 1em;
   }
+
+  .content a {
+  padding: 0 0.25em;
+  font-weight: 500;
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s;
+}
+
+.content a:hover {
+  color: #d04c3f;
+}
+
+.content a::before,
+.content a::after {
+  position: absolute;
+  top: -0.1em;
+  font-weight: 100;
+  font-size: 150%;
+  line-height: 1;
+  opacity: 0;
+  -webkit-transition: opacity 0.2s, -webkit-transform 0.2s;
+  transition: opacity 0.2s, transform 0.2s;
+}
+
+.content a::before {
+  left: -0.23em;
+  content: '[';
+  -webkit-transform: translateX(-100%);
+  transform: translateX(-100%);
+}
+
+.content a::after {
+  right: -0.23em;
+  content: ']';
+  -webkit-transform: translateX(100%);
+  transform: translateX(100%);
+}
+
+.content a:hover::before,
+.content a:hover::after {
+  opacity: 1;
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+}
 </style>
