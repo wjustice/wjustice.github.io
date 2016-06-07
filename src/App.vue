@@ -9,7 +9,7 @@
           <div class="email-wrapper">
             <a class="link" href="mailto:will@thewilljustice.com?Subject=Thanks%20for%20the%20awesome%20subject%20line" id="email">will@thewilljustice.com</a>
             <div v-if="showTooltip" class="tooltip" transition="fade">Copied to clipboard</div>
-            <button class="btn" data-clipboard-target="#email"><img src="./assets/clippy.svg"></button>
+            <!-- <button class="btn" data-clipboard-target="#email"><img src="./assets/clippy.svg">Copy to clipboard</button> -->
           </div>
           <a class="link" href="https://www.linkedin.com/in/will-justice-aa524857" target="_blank">LinkedIn</a>
           <a class="link" href="https://github.com/wjustice" target="_blank">Github</a>
@@ -102,6 +102,7 @@ export default {
     width: 66.7%;
     flex-flow: row wrap;
     align-items: center;
+    transform: translateY(-22.7%);
     display: flex;
     justify-content: center;
   }
@@ -110,6 +111,7 @@ export default {
     margin-right: 1.7em;
   }
   .email-wrapper .btn {
+    color: #888888;
     cursor: pointer;
     z-index: 1001;
     background: none;

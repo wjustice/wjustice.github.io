@@ -34,14 +34,14 @@
 }
 
 .content a::before {
-    left: -0.23em;
+    left: -0.35em;
     content: '[';
     -webkit-transform: translateX(-100%);
     transform: translateX(-100%);
 }
 
 .content a::after {
-    right: -0.23em;
+    right: -0.35em;
     content: ']';
     -webkit-transform: translateX(100%);
     transform: translateX(100%);
