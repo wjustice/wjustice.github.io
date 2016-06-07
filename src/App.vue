@@ -3,12 +3,12 @@
 
     <main class="wrapper">
       <div class="content">
-        <h1>Oh hi there <span class="emoji"><img src="https://twemoji.maxcdn.com/svg/1f44b.svg"></span>! My name is Will Justice and these days I'm a <a class="no-wrap" href="http://bradfrost.com/blog/post/frontend-design/" target="_black">front-end designer</a> (but over the years I've worked as a UX/UI designer and full-stack developer, respectively). I know, I know, there isn't much here. Most of my work is NDA protected (<span class="emoji"><img src="https://twemoji.maxcdn.com/svg/1f611.svg"></span>). But if you're interested (!) please reach out and I can probably send you some cool stuff <span class="emoji"><img src="https://twemoji.maxcdn.com/svg/1f44d.svg"></span>.</h1>
+        <h1>Oh hi there <span class="emoji"><img src="https://twemoji.maxcdn.com/svg/1f44b.svg"></span>! My name is Will Justice and these days I'm a <a class="no-wrap" href="http://bradfrost.com/blog/post/frontend-design/" target="_black">front-end designer</a> (but over the years I've worked as a UX/UI designer and full-stack developer, respectively). I know, I know, there isn't much here. Most of my work is NDA protected <span class="emoji no-wrap">(<img src="https://twemoji.maxcdn.com/svg/1f611.svg">).</span> But if you're interested (!) please reach out and I can probably send you some cool stuff <span class="emoji"><img src="https://twemoji.maxcdn.com/svg/1f44d.svg"></span>.</h1>
 
         <div class="contact-links">
           <div class="email-wrapper">
             <a class="link" href="mailto:will@thewilljustice.com?Subject=Thanks%20for%20the%20awesome%20subject%20line" id="email">will@thewilljustice.com</a>
-            <div v-if="showTooltip" class="tooltip" transition="fade">Copied to clipboard</div>
+            <!-- <div v-if="showTooltip" class="tooltip" transition="fade">Copied to clipboard</div> -->
             <!-- <button class="btn" data-clipboard-target="#email"><img src="./assets/clippy.svg">Copy to clipboard</button> -->
           </div>
           <a class="link" href="https://www.linkedin.com/in/will-justice-aa524857" target="_blank">LinkedIn</a>
@@ -81,7 +81,7 @@ export default {
     position: relative;
     text-decoration: none;
   }
-  a.no-wrap{
+  .no-wrap{
     display: inline-block;
     white-space: normal;
   }
@@ -100,6 +100,7 @@ export default {
   }
   .content {
     width: 66.7%;
+    max-width: 800px;
     flex-flow: row wrap;
     align-items: center;
     transform: translateY(-22.7%);
